@@ -14,10 +14,14 @@ public class MainActivity extends AppCompatActivity implements IConverterView {
     @BindView(R.id.hex_edit_text)EditText mHexEditText;
     @BindView(R.id.bin_edit_text)EditText mBinEditText;
 
+    private IConverterPresenter mPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mPresenter = new Presenter(this, new Model());
     }
 
     @Override

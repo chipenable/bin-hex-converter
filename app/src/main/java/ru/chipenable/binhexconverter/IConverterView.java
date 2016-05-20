@@ -1,7 +1,6 @@
 package ru.chipenable.binhexconverter;
 
 import android.content.Context;
-import android.text.Spannable;
 
 /**
  * Created by Pashgan on 20.05.2016.
