@@ -35,7 +35,7 @@
                         android:layout_weight="1"
                         android:text="@string/dec_format"
                         android:textColor="@color/hint_text"/>
-                    
+
                 </TableRow>
 
 
