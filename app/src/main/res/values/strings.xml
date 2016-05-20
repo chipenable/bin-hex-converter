@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BinHexConverter</string>
+    <string name="bin_format">bin</string>
+    <string name="hex_format">hex</string>
+    <string name="dec_format">dec</string>
+    <string name="amount_numbers">amount:</string>
+    <string name="cursor_position">position:</string>
+    <string name="clear">Clear</string>
+    <string name="calculate">Calculate</string>
+    <string name="about">About</string>
+    <string name="action_share">Share app</string>
+</resources>
