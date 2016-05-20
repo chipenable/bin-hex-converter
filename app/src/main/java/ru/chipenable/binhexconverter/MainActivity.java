@@ -4,8 +4,15 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Spannable;
+import android.widget.EditText;
+
+import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity implements IConverterView {
+
+    @BindView(R.id.dec_edit_text)EditText mDecEditText;
+    @BindView(R.id.hex_edit_text)EditText mHexEditText;
+    @BindView(R.id.bin_edit_text)EditText mBinEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,21 +22,21 @@ public class MainActivity extends AppCompatActivity implements IConverterView {
 
     @Override
     public void displayBin(String data) {
-
+        mBinEditText.setText(data);
     }
 
     @Override
     public void displayHex(String data) {
-
+        mHexEditText.setText(data);
     }
 
     @Override
     public void displayDec(String data) {
-
+        mDecEditText.setText(data);
     }
 
     @Override
     public Context getAppContext() {
-        return null;
+        return getApplicationContext();
     }
 }
