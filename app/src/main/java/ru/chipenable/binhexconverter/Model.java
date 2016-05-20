@@ -60,13 +60,4 @@ public class Model implements IConverterModel {
         return converter(data, DEC_RADIX, BIN_RADIX);
     }
 
-    @Override
-    public void saveData(Context context, String key, String data) {
-
-    }
-
-    @Override
-    public String restoreData(Context context, String key) {
-        return null;
-    }
 }

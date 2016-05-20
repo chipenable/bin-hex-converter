@@ -1,5 +1,7 @@
 package ru.chipenable.binhexconverter;
 
+import android.support.v4.os.IResultReceiver;
+
 import java.lang.ref.WeakReference;
 
 /**
@@ -9,20 +11,22 @@ public class Presenter implements IConverterPresenter {
 
     private WeakReference<IConverterView> mView;
     private IConverterModel mModel;
+    private IConverterRepository mRepository;
 
-    public Presenter(IConverterView view, IConverterModel model){
+    public Presenter(IConverterView view, IConverterModel model, IConverterRepository repo){
         mView = new WeakReference<>(view);
         mModel = model;
+        mRepository = repo;
     }
 
     @Override
-    public void saveData(int id, String value) {
-
+    public void saveData(String id, String value) {
+        mRepository.saveData(id, value);
     }
 
     @Override
-    public String restoreData(int id) {
-        return null;
+    public String restoreData(String id) {
+        return mRepository.restoreData(id);
     }
 
     @Override

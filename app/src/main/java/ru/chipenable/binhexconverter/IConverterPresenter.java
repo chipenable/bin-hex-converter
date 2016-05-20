@@ -5,8 +5,8 @@ package ru.chipenable.binhexconverter;
  */
 public interface IConverterPresenter {
 
-    void saveData(int id, String value);
-    String restoreData(int id);
+    void saveData(String id, String value);
+    String restoreData(String id);
 
     void convertHex(String data);
     void convertBin(String data);
