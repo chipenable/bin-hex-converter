@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
@@ -93,6 +96,25 @@ public class MainActivity extends AppCompatActivity implements IConverterView,
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.action_erase:
+                clearViews();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+    }
+
+    @Override
     public void displayBin(String data) {
         mBinEditText.setText(data);
     }
@@ -143,5 +165,11 @@ public class MainActivity extends AppCompatActivity implements IConverterView,
         if (editText.isFocused()){
             editText.addTextChangedListener(textWatcher);
         }
+    }
+
+    private void clearViews(){
+        mDecEditText.setText(null);
+        mHexEditText.setText(null);
+        mBinEditText.setText(null);
     }
 }

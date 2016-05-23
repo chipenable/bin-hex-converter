@@ -20,7 +20,7 @@ public class ConverterModelTest {
 
     @Before
     public void createConverterModel(){
-        model = new Model();
+        model = new Model(null);
         random = new Random();
     }
 
