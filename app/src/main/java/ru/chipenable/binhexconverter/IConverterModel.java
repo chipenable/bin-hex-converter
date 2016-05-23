@@ -14,5 +14,6 @@ public interface IConverterModel {
     String decToHex(String data);
     String decToBin(String data);
 
-
+    void saveData(String id, String value);
+    String restoreData(String id);
 }

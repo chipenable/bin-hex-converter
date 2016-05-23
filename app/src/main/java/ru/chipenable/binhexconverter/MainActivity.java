@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity implements IConverterView {
         ButterKnife.bind(this);
 
         Repository repository = new Repository(this.getPreferences(Activity.MODE_PRIVATE));
-        Model model = new Model();
-        mPresenter = new Presenter(this, model, repository);
+        Model model = new Model(repository);
+        mPresenter = new Presenter(this, model);
     }
 
     @Override

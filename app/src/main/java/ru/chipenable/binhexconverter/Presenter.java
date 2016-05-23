@@ -11,22 +11,20 @@ public class Presenter implements IConverterPresenter {
 
     private WeakReference<IConverterView> mView;
     private IConverterModel mModel;
-    private IConverterRepository mRepository;
 
-    public Presenter(IConverterView view, IConverterModel model, IConverterRepository repo){
+    public Presenter(IConverterView view, IConverterModel model){
         mView = new WeakReference<>(view);
         mModel = model;
-        mRepository = repo;
     }
 
     @Override
     public void saveData(String id, String value) {
-        mRepository.saveData(id, value);
+        mModel.saveData(id, value);
     }
 
     @Override
     public String restoreData(String id) {
-        return mRepository.restoreData(id);
+        return mModel.restoreData(id);
     }
 
     @Override

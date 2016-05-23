@@ -14,6 +14,12 @@ public class Model implements IConverterModel {
     private static final int HEX_RADIX = 16;
     private static final int BIN_RADIX = 2;
 
+    private IConverterRepository mRepository;
+
+    public Model(IConverterRepository repository){
+        mRepository = repository;
+    }
+
     private String converter(String data, int inRadix, int outRadix) {
         String result = "";
 
@@ -58,6 +64,16 @@ public class Model implements IConverterModel {
     @Override
     public String decToBin(String data) {
         return converter(data, DEC_RADIX, BIN_RADIX);
+    }
+
+    @Override
+    public void saveData(String id, String value) {
+        mRepository.saveData(id, value);
+    }
+
+    @Override
+    public String restoreData(String id) {
+        return mRepository.restoreData(id);
     }
 
 }
