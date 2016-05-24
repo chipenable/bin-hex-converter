@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BinHexConverter.iml" filepath="$PROJECT_DIR$/BinHexConverter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bin-hex-converter.iml" filepath="$PROJECT_DIR$/bin-hex-converter.iml" />
     </modules>
   </component>
 </project>

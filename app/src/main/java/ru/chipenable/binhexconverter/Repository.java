@@ -1,5 +1,7 @@
 package ru.chipenable.binhexconverter;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
@@ -7,10 +9,11 @@ import android.content.SharedPreferences;
  */
 public class Repository implements IConverterRepository {
 
+    private static final String PREF_NAME = "ru.chipenable.binhexconverter.repository";
     private SharedPreferences mSharedPreferences;
 
-    public Repository(SharedPreferences pref){
-        mSharedPreferences = pref;
+    public Repository(Context context){
+        mSharedPreferences = context.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
     }
 
     @Override

@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements IConverterView,
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        IConverterRepository repository = new Repository(this.getPreferences(Activity.MODE_PRIVATE));
+        IConverterRepository repository = new Repository(this);
         IConverterModel model = new Model(repository);
         mPresenter = new Presenter(this, model);
 
