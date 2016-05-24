@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity implements IConverterView,
                 clearViews();
                 return true;
 
+            case R.id.action_about:
+                AboutDialog.show(getSupportFragmentManager());
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

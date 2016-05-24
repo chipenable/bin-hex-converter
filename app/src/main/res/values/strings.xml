@@ -10,4 +10,7 @@
     <string name="about">About</string>
     <string name="action_share">Share app</string>
     <string name="erase">Erase</string>
+    <string name="ok">ok</string>
+    <string name="about_app">About app</string>
+    <string name="about_dialog_msg">The app is written by Pavel Bobkov for educational purposes.</string>
 </resources>
